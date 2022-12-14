@@ -11,7 +11,7 @@ void splashScreen() {
   */
   //background(255); //Testing only, not nightmode friendly, full BLUE
  backgroundWhiteScreen();
- spaceBarText();
+spaceBarText();
 }//End splash Screen
 //
 //End splash Screen Subprogram
