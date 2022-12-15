@@ -21,8 +21,10 @@ void homeScreen() {
   //rect ( quitX, quitY, quitWidth, quitHeight );
   if ( mouseX>=quitX && mouseX<=quitX+quitWidth && mouseY>=quitY && mouseY<=quitY+quitHeight ) { //Quit Button Hoverover
   //Cookie, aspect ratio
+ 
   quitButtonImage();
 } else {
+ 
   quitButtonText(); 
 }
 }//End homeScreen
