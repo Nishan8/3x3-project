@@ -1,5 +1,6 @@
 int backgroundX, backgroundY, backgroundWidth, backgroundHeight;
 float quitX, quitY, quitWidth, quitHeight;
+float quitButtonImageRectX, quitButtonImageRectY, quitButtonImageRectWidth, quitButtonImageRectHeight;
 int tintDayMode=255, tintDayModeOpacity=50;
 int tintRed=64, tintGreen=64, tintBlue=0, tintNightModeOpacity=85;
 int LineX, LineY, LineWidth, LineHeight;
@@ -20,9 +21,7 @@ void homeScreen() {
   //rect ( quitX, quitY, quitWidth, quitHeight );
   if ( mouseX>=quitX && mouseX<=quitX+quitWidth && mouseY>=quitY && mouseY<=quitY+quitHeight ) { //Quit Button Hoverover
   //Cookie, aspect ratio
-  fill(white);
-   rect( quitX, quitY, quitWidth, quitHeight );
-   noFill();
+  quitButtonImage();
 } else {
   quitButtonText(); 
 }
