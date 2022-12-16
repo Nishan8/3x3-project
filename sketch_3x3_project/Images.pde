@@ -26,32 +26,39 @@ void quitButtonImage() {
     //
     quitButtonImageWidth_Adjusted = quitButtonImageRectWidth;
     ImageHeightRatio= smallerDimension/LargerDimension;
-   quitButtonImageHeight_Calculated = quitButtonImageWidth_Adjusted*ImageHeightRatio;
-   //
-   float centerX=appWidth*1/2;
-   quitButtonImageRectX = centerX-quitButtonImageWidth_Adjusted *1/2;
-   image(quitButtonImage, quitButtonImageRectX, quitButtonImageRectY, quitButtonImageRectWidth, quitButtonImageRectHeight );
-////////
-} else {//Portrait
+    quitButtonImageHeight_Calculated = quitButtonImageWidth_Adjusted*ImageHeightRatio;
+    //
+    float centerX=appWidth*1/2;
+    quitButtonImageRectX = centerX-quitButtonImageWidth_Adjusted *1/2;
+    image(quitButtonImage, quitButtonImageRectX, quitButtonImageRectY, quitButtonImageRectWidth, quitButtonImageRectHeight );
+    ////////
+  } else {//Portrait
     largerDimension = quitButtonImageHeight;
     smallerDimension = quitButtonImageWidth;
     //
-     quitButtonImageHeight_Adjusted = quitButtonImageRectHeight;
+    quitButtonImageHeight_Adjusted = quitButtonImageRectHeight;
     ImageWidthRatio= smallerDimension/LargerDimension;
-   quitButtonImageWidth_Calculated = quitButtonImageHeight_Adjusted*ImageWidthRatio;
-   //
-   float centerX=appWidth*1/2;
-   quitButtonImageRectX = centerX - quitButtonImageWidth_Calculated*1/2;
-   
-  image( quitButtonImage, quitButtonImageRectX, quitButtonImageRectY, quitButtonImageWidth_Calculated, quitButtonImageHeight_Adjusted);
+    quitButtonImageWidth_Calculated = quitButtonImageHeight_Adjusted*ImageWidthRatio;
     //
-    
+    float centerX=appWidth*1/2;
+    quitButtonImageRectX = centerX - quitButtonImageWidth_Calculated*1/2;
+    imageNightMode();
+    image( quitButtonImage, quitButtonImageRectX, quitButtonImageRectY, quitButtonImageWidth_Calculated, quitButtonImageHeight_Adjusted);
+    //
   }
-  
- // image(quitButtonImage, quitButtonImageRectX, quitButtonImageRectY, quitButtonImageRectWidth, quitButtonImageRectHeight );
+
+
+  // image(quitButtonImage, quitButtonImageRectX, quitButtonImageRectY, quitButtonImageRectWidth, quitButtonImageRectHeight );
   //
   //Rectangle's smallest dimension
   //Image's scaled dimension matching rectangles smallest dimension
   //Images other dimension, scaled
 }//End quitButtonImage
+void imageNightMode() {
+  if ( nightMode==true ) {
+    tint( tintRed, tintGreen, tintBlue, tintNightModeOpacity);
+  } else {
+    tint( tintDayMode, tintDayModeOpacity );
+  }
+}
 //End Images Subprogram

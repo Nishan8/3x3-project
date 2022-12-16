@@ -16,7 +16,7 @@ int LineX, LineY, LineWidth, LineHeight;
  */
 //
 void homeScreen() {
-  println("Arrived at Home Screen"); //Testing for Splash Screen Start Button
+  //println("Arrived at Home Screen"); //Testing for Splash Screen Start Button
   //
   //rect ( quitX, quitY, quitWidth, quitHeight );
   if ( mouseX>=quitX && mouseX<=quitX+quitWidth && mouseY>=quitY && mouseY<=quitY+quitHeight ) { //Quit Button Hoverover

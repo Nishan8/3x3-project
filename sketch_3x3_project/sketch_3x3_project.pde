@@ -1,7 +1,7 @@
 //Global Variables
 int appWidth, appHeight, smallerDimension, largerDimension;
 Boolean OS_on=false, splashScreenStart=false, nightMode=false;
-color purple=#FF00FF, resetDefaultInk=#000000, white=#FFFFFF;
+color purple=#FF00FF, resetDefaultInk=#000000, white=#FFFFFF, black=#000000;
 //
 void setup() {
   size(600, 400);
@@ -47,6 +47,8 @@ void keyPressed() {
 void mousePressed() {
   //OS Level Mouse Click
   if ( OS_on==false )  OS_on=true; //End OS Level Mouse Click
+//Quit Button
+if ( splashScreenStart==true && mouseX>=quitX && mouseX<=quitX+quitWidth && mouseY>=quitY && mouseY<=quitY+quitHeight ) exit();
 }//End mousePressed
 //
 //End MAIN Program

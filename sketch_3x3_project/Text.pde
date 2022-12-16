@@ -9,7 +9,7 @@ void textSetup() {
 //
 void quitButtonText() {
  // rect(startX, startY, startWidth, startHeight);
-  fill(purple); //Ink
+  fill(white); //Ink
   textAlign(CENTER, CENTER); //Align X&Y, see Processing.org / Reference
   //Values: [ LEFT | CENTER | RIGHT ] & [ TOP | CENTER | BOTTOM | BASELINE ]
   int size = 19;
