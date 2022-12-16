@@ -2,7 +2,7 @@ PFont Arial;
 String quitButton = "Quit", spaceBar = "space";
 //
 void textSetup() {
-   Arial = createFont("Arial", 55);
+   Arial = createFont("Arial", 50);
 }//End textsetup
 //
 //
@@ -12,7 +12,7 @@ void quitButtonText() {
   fill(white); //Ink
   textAlign(CENTER, CENTER); //Align X&Y, see Processing.org / Reference
   //Values: [ LEFT | CENTER | RIGHT ] & [ TOP | CENTER | BOTTOM | BASELINE ]
-  int size = 19;
+  int size = 60;
   textFont(Arial, size);
   text( quitButton, quitX, quitY, quitWidth, quitHeight);
   noFill();
