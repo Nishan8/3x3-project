@@ -4,7 +4,8 @@ Boolean OS_on=false, splashScreenStart=false, nightMode=false;
 color purple=#FF00FF, resetDefaultInk=#000000, white=#FFFFFF, black=#000000;
 //
 void setup() {
-  size(600, 400);
+fullScreen();
+  //size(600, 400);
   //fullScreen(); //displayWidth //displayHeight
   appWidth = width;
   appHeight = height;
