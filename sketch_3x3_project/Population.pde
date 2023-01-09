@@ -25,6 +25,13 @@ void population() {
    quitButtonImageRectX = quitX ;
    quitButtonImageRectY = quitY ;
    //
+    //
+   /*
+   IMG1ButtonImageRectWidth = quitWidth  ;
+   IMG1ButtonImageRectHeight = quitHeight ;
+   IMG1ButtonImageRectX = quitX ;
+  IMG1ButtonImageRectY = quitY ;
+  //
 }//End Population
 //
 //End Population Subprogram
