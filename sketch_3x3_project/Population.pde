@@ -31,6 +31,7 @@ void population() {
    IMG1ButtonImageRectHeight = quitHeight ;
    IMG1ButtonImageRectX = quitX ;
   IMG1ButtonImageRectY = quitY ;
+  */
   //
 }//End Population
 //
