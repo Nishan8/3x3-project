@@ -52,7 +52,7 @@ String ls="Landscape or Square", p="portrait", DO="Display Orientation:", instru
   //
   buttonFont= createFont ("Arial", 20);
      
-  rectangleSetup();
+  rectanglesSetup();
   //Single Executed Code
   
 }

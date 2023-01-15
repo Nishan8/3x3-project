@@ -19,7 +19,7 @@ String LeftTopText="Another small change";
 String MidTopText="Until the current iPhone";
 int xCenter=appWidth/2;
 int yCenter=appHeight/2;
-void rectangleSetup() {
+void rectanglesSetup() {
   //Population
   appWidth=width;
   appHeight=height;
