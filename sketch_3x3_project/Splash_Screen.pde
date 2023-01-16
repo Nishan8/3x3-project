@@ -7,9 +7,8 @@ boolean picDraw5=false;
 //
 void image5(){
 //CANVAS
-
 //Popoulation
-pic5 = loadImage("../Images/iphone.jpg"); //Dimensions: width:459, height: 100
+pic5 = loadImage("../Images/iphone.jpg"); 
 //Note: Dimensions are found in the image file / Right Click / Properties / Details
 //Algorithm : Find the larger dimesion for aspect ration (comparison of two numbers)
 int picWidth5 = 459;

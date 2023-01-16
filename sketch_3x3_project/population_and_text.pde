@@ -8,7 +8,6 @@ float midLowX, midLowY, midLowWidth, midLowHeight;
 float leftTopX, leftTopY, leftTopWidth, leftTopHeight;
 float leftMidX, leftMidY, leftMidWidth, leftMidHeight;
 float leftLowX, leftLowY, leftLowWidth, leftLowHeight;
-
 String RightTopText= "Then came the next";
 String RightMidText= "The design had changed, but not significantly until...";
 String RightLowText= "The next was even smarter";
@@ -17,12 +16,12 @@ String LeftLowText="The home button was removed";
 String LeftMidText="The camera changes once again";
 String LeftTopText="Another small change";
 String MidTopText="Until the current iPhone";
-int xCenter=appWidth/2;
-int yCenter=appHeight/2;
 void rectanglesSetup() {
   //Population
   appWidth=width;
   appHeight=height;
+int xCenter=appWidth/2;
+int yCenter=appHeight/2;
   rightTopX=xCenter-appWidth/2;
   rightTopY=yCenter-appHeight/2;
   rightTopWidth=appWidth/3;
@@ -67,13 +66,13 @@ void rectanglesSetup() {
   leftLowY=rightMidY+rightMidHeight;
   leftLowWidth=appWidth/3;
   leftLowHeight=appHeight/3;
-  //END POPULATION
+  //LeftLow
   
   
   
   
 }
-//START RECTANGLES
+//End rectanglesSetup
 
 void rectangleDraw() {
   if (RightTop==true) {rect(rightTopX, rightTopY, rightTopWidth, rightTopHeight);} 
@@ -85,15 +84,15 @@ void rectangleDraw() {
   if (LeftMid==true) {rect(leftMidX, leftMidY, leftMidWidth, leftMidHeight);}
   if (LeftLow==true) {rect(leftLowX, leftLowY, leftLowWidth, leftLowHeight);}
   if(mouseX>=midCenterX && mouseX<=midCenterX+midCenterWidth && mouseY>=midCenterY && mouseY<=midCenterY+midCenterHeight) {
-    buttonFill = Blue  ;
+    buttonFill = white ;
   } else {
-    buttonFill = white;
+    buttonFill =blue;
   }//End Hover-Over
   fill(buttonFill); //
    rect(midCenterX, midCenterY,midCenterWidth, midCenterHeight);
   fill(resetButtonColour);
   stroke(1);
-  fill(black);
+  fill(white);
   textAlign(CENTER,CENTER);
   textFont(buttonFont, 24);
   text(startButtonText,midCenterX, midCenterY,midCenterWidth, midCenterHeight);
@@ -102,13 +101,13 @@ void rectangleDraw() {
   if(RightTop==true){if(mouseX>=rightTopX && mouseX<=rightTopX+rightTopWidth && mouseY>=rightTopY && mouseY<=rightTopY+rightTopHeight ) {
     buttonFill = white ;
   } else {
-    buttonFill =Blue;
+    buttonFill =blue;
   }//End Hover-Over
   fill(buttonFill); //
    rect(rightTopX, rightTopY, rightTopWidth, rightTopHeight);
   fill(resetButtonColour);
   stroke(1);
-  fill(black);
+  fill(white);
   textAlign(CENTER,CENTER);
   textFont(buttonFont, 24);
   text(RightTopText,rightTopX, rightTopY, rightTopWidth, rightTopHeight);
@@ -116,15 +115,15 @@ void rectangleDraw() {
   fill(resetBlack);}
  // 
   if(RightMid==true){if(mouseX>=rightMidX && mouseX<=rightMidX+rightMidWidth && mouseY>=rightMidY && mouseY<=rightMidY+rightMidHeight ) {
-    buttonFill = Blue ;
+    buttonFill = white ;
   } else {
-    buttonFill =white;
+    buttonFill =blue;
   }//End Hover-Over
   fill(buttonFill); //
    rect(rightMidX, rightMidY, rightMidWidth, rightMidHeight);
   fill(resetButtonColour);
   stroke(1);
-  fill(black);
+  fill(white);
   textAlign(CENTER,CENTER);
   textFont(buttonFont, 24);
   text(RightMidText,rightMidX, rightMidY, rightMidWidth, rightMidHeight);
@@ -132,15 +131,15 @@ void rectangleDraw() {
   fill(resetBlack);}
   //
   if(RightLow==true){if(mouseX>=rightLowX && mouseX<=rightLowX+rightLowWidth && mouseY>=rightLowY && mouseY<=rightLowY+rightLowHeight ) {
-    buttonFill = Blue ;
+    buttonFill = white ;
   } else {
-    buttonFill =white;
+    buttonFill =blue;
   }//End Hover-Over
   fill(buttonFill); //
    rect(rightLowX, rightLowY, rightLowWidth, rightLowHeight);
   fill(resetButtonColour);
   stroke(1);
-  fill(black);
+  fill(white);
   textAlign(CENTER,CENTER);
   textFont(buttonFont, 24);
   text(RightLowText,rightLowX, rightLowY, rightLowWidth, rightLowHeight);
@@ -148,15 +147,15 @@ void rectangleDraw() {
   fill(resetBlack);}
   //
   if(midLow==true){if(mouseX>=midLowX && mouseX<=midLowX+midLowWidth && mouseY>=midLowY && mouseY<=midLowY+midLowHeight ) {
-    buttonFill = Blue ;
+    buttonFill = white ;
   } else {
-    buttonFill =white;
+    buttonFill =blue;
   }//End Hover-Over
   fill(buttonFill); //
    rect(midLowX, midLowY, midLowWidth, midLowHeight);
   fill(resetButtonColour);
   stroke(1);
-  fill(black);
+  fill(white);
   textAlign(CENTER,CENTER);
   textFont(buttonFont, 24);
   text(MidLowText,midLowX, midLowY, midLowWidth, midLowHeight);
@@ -164,15 +163,15 @@ void rectangleDraw() {
   fill(resetBlack);}
   //
   if(LeftLow==true){if(mouseX>=leftLowX && mouseX<=leftLowX+leftLowWidth && mouseY>=leftLowY && mouseY<=leftLowY+leftLowHeight ) {
-    buttonFill = Blue ;
+    buttonFill = white ;
   } else {
-    buttonFill =white;
+    buttonFill =blue;
   }//End Hover-Over
   fill(buttonFill); //
    rect(leftLowX, leftLowY, leftLowWidth, leftLowHeight);
   fill(resetButtonColour);
   stroke(1);
-  fill(black);
+  fill(white);
   textAlign(CENTER,CENTER);
   textFont(buttonFont, 24);
   text(LeftLowText,leftLowX, leftLowY, leftLowWidth, leftLowHeight);
@@ -180,15 +179,15 @@ void rectangleDraw() {
   fill(resetBlack);}
   //
   if(LeftMid==true){if(mouseX>=leftMidX && mouseX<=leftMidX+leftMidWidth && mouseY>=leftMidY && mouseY<=leftMidY+leftMidHeight ) {
-    buttonFill = Blue ;
+    buttonFill = white ;
   } else {
-    buttonFill =white;
+    buttonFill =blue;
   }//End Hover-Over
   fill(buttonFill); //
    rect(leftMidX, leftMidY, leftMidWidth, leftMidHeight);
   fill(resetButtonColour);
   stroke(1);
-  fill(black);
+  fill(white);
   textAlign(CENTER,CENTER);
   textFont(buttonFont, 24);
   text(LeftMidText,leftMidX, leftMidY, leftMidWidth, leftMidHeight);
@@ -196,15 +195,15 @@ void rectangleDraw() {
   fill(resetBlack);}
   //
   if(LeftTop==true){if(mouseX>=leftTopX && mouseX<=leftTopX+leftTopWidth && mouseY>=leftTopY && mouseY<=leftTopY+leftTopHeight ) {
-    buttonFill = Blue ;
+    buttonFill = blue ;
   } else {
-    buttonFill =black;
+    buttonFill =white;
   }//End Hover-Over
   fill(buttonFill); //
    rect(leftTopX, leftTopY, leftTopWidth, leftTopHeight);
   fill(resetButtonColour);
   stroke(1);
-  fill(black);
+  fill(white);
   textAlign(CENTER,CENTER);
   textFont(buttonFont, 22);
   text(LeftTopText,leftTopX, leftTopY, leftTopWidth, leftTopHeight);
@@ -212,15 +211,15 @@ void rectangleDraw() {
   fill(resetBlack);}
   //
   if(MidTop==true){if(mouseX>=midTopX && mouseX<=midTopX+midTopWidth && mouseY>=midTopY && mouseY<=midTopY+midTopHeight ) {
-    buttonFill = Blue ;
+    buttonFill = white;
   } else {
-    buttonFill =black;
+    buttonFill =blue;
   }//End Hover-Over
   fill(buttonFill); //
    rect(midTopX, midTopY, midTopWidth, midTopHeight);
   fill(resetButtonColour);
   stroke(1);
-  fill(black);
+  fill(white);
   textAlign(CENTER,CENTER);
   textFont(buttonFont, 24);
   text(MidTopText,midTopX, midTopY, midTopWidth, midTopHeight);

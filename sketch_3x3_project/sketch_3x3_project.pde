@@ -3,6 +3,12 @@ int appWidth;
 int appHeight;
 int XCenter;
 int YCenter;
+String startButtonText= "Start";
+PFont buttonFont;
+color black=#000000, resetBlack=black;
+color blue=#0000FF, white=#FFFFFF, resetButtonColour=#00eaff, buttonFill;
+Boolean nightMode=false;
+color backgroundColor;
 boolean RightTop=false;
 boolean RightMid=false;
 boolean RightLow=false;
@@ -11,49 +17,46 @@ boolean midLow=false;
 boolean LeftTop=false;
 boolean LeftMid=false;
 boolean LeftLow=false;
-String startButtonText= "Start";
-PFont buttonFont;
-color black=#000000, resetBlack=black;
-color Blue=#0000FF, white=#FFFFFF, resetButtonColour=#00eaff, buttonFill;
-Boolean nightMode=false;
-color backgroundColor;
 //
 void setup() {
   //CANVAS
-  fullScreen();
+  size(800,600);//Landscape
   println(width, height, displayWidth, displayHeight);
     if (width>displayWidth) 
-{appWidth=displayWidth;println("Readjust Canvas");} else{
+{appWidth=displayWidth;println("CANVAS too big, readjust to fit screen ");} else{
 appWidth=width;
-println("Canvas is Ready.");}
+println("CANVAS is Good to go on your display.");}
 //
  if (height>displayHeight) 
-{appHeight=displayHeight; println("Readjust canvas.");} else{
+{appHeight=displayHeight; println("CANVAS too big, readjust to fit screen.");} else{
 appHeight=height;
-println("Canvas is Ready.");}
+println("CANVAS works");}
 //
-String ls="Landscape or Square", p="portrait", DO="Display Orientation:", instruct="rotate phone";
+ String ls="Landscape or Square", p="portrait", DO="Display Orientation:", instruct="rotate phone";
   String orientation = ( appWidth>=appHeight ) ? ls : p; //Ternary Operator
   println( DO, orientation );
-  if ( orientation==ls ) { //Test Display Orientation 
-    println("Ready");
+  if ( orientation==ls ) { //Test for chosen display orientation
+    println("Good to Go");
   } else {
-    appWidth *= 0; 
+    appWidth *= 0; //asignment operator
     appHeight *= 0;
     println(instruct);
-  
+    
   }
   if (nightMode==true) {
-    backgroundColor = color (random(200), random (400), 255 );
+    backgroundColor = color (random(400), random (300), 0 );
     background( backgroundColor);
   }else{
-    backgroundColor = color( random(200), random(400), random(100));
+    backgroundColor = color( random(400), random(235), random(300));
     background( backgroundColor);}
   //
-  buttonFont= createFont ("Arial", 20);
-     
+  buttonFont= createFont ("Arial", 23);
+  
   rectanglesSetup();
   //Single Executed Code
+//Fonts from OS (Operating System)
+//String[] fontList = PFont.list(); //To list all fonts available on OS
+//printArray(fontList); //For listing all possible fonts to choose from, then createFont
   
 }
 //End setup
@@ -72,6 +75,9 @@ void draw() {
 
 }
 //End Draw
+void keyPressed() {
+}
+//End keyPressed
 void mousePressed() {
   if ( mouseX>=midCenterX && mouseX<=midCenterX+midCenterWidth && mouseY>=midCenterY && mouseY<=midCenterY+midCenterHeight ) 
   {RightTop=true; pic1Draw=true;}
@@ -100,15 +106,12 @@ void mousePressed() {
    rect(rightTopX, rightTopY, rightTopWidth, rightTopHeight);
   fill(resetButtonColour);
   stroke(1);
-  fill(black);
+  fill(white);
   textAlign(CENTER,CENTER);
-  textFont(buttonFont, 20);
+  textFont(buttonFont, 24);
   text(startButtonText,rightTopX, rightTopY, rightTopWidth, rightTopHeight);
   stroke(1);
   fill(resetBlack);
 }
 //End mousePressed
-void keyPressed() {
-}
-//END KEYPRESSED
 //End MAIN program
