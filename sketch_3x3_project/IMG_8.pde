@@ -7,12 +7,12 @@ boolean picDraw8=false;
 //
 void image8(){
 //CANVAS
-//Popoulation
-pic8 = loadImage("../Images/iPhone13.jpg"); //Dimensions: width:1400, height: 900
+//Population
+pic8 = loadImage("../Images/iPhone13.jpg"); //Dimensions: 1920x1080
 //Note: Dimensions are found in the image file / Right Click / Properties / Details
 //Algorithm : Find the larger dimesion for aspect ration (comparison of two numbers)
-int picWidth8 = 2260;
-int picHeight8 = 1695; 
+int picWidth8 = 1920;
+int picHeight8 = 1080; 
 if ( picWidth8 >= picHeight8) {//Image Dimensions Comparison
 // True if Landscape or Square
  imageLargerDimension8 = picWidth8;

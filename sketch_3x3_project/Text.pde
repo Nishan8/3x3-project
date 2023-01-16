@@ -8,10 +8,10 @@ boolean picDraw6=false;
 void image6(){
 //CANVAS
 
-//Popoulation
-pic6 = loadImage("../Images/iPhoneX.jpg"); //Dimensions: width:2016, height: 1320
-int picWidth6 = 2016;
-int picHeight6 = 1320; 
+//Population
+pic6 = loadImage("../Images/iPhoneX.jpg"); //Dimensions: 182x272
+int picWidth6 = 182;
+int picHeight6 = 272; 
 if ( picWidth6 >= picHeight6) {//Image Dimensions Comparison
 // True if Landscape or Square
  imageLargerDimension6 = picWidth6;

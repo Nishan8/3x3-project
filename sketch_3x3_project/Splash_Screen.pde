@@ -7,12 +7,13 @@ boolean picDraw5=false;
 //
 void image5(){
 //CANVAS
-//Popoulation
-pic5 = loadImage("../Images/iphone.jpg"); 
+
+//Population
+pic5 = loadImage("../Images/iphone.jpg"); //1280x720
 //Note: Dimensions are found in the image file / Right Click / Properties / Details
 //Algorithm : Find the larger dimesion for aspect ration (comparison of two numbers)
-int picWidth5 = 459;
-int picHeight5 = 100; 
+int picWidth5 = 1280;
+int picHeight5 = 720; 
 if ( picWidth5 >= picHeight5) {//Image Dimensions Comparison
 // True if Landscape or Square
  imageLargerDimension5 = picWidth5;

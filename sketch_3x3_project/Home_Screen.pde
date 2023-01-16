@@ -9,11 +9,11 @@ void image2(){
 //CANVAS
 
 //Popoulation
-pic2 = loadImage("../Images/Iphone 3.jpg"); //Dimensions: width:929, height: 700
+pic2 = loadImage("../Images/Iphone 3.jpg"); //Dimensions: 253x199
 //Note: Dimensions are found in the image file / Right Click / Properties / Details
 //Algorithm : Find the larger dimesion for aspect ration (comparison of two numbers)
-int picWidth2 = 929;
-int picHeight2 = 700; 
+int picWidth2 = 253;
+int picHeight2 = 199; 
 if ( picWidth2 >= picHeight2) {//Image Dimensions Comparison
 // True if Landscape or Square
  imageLargerDimension2 = picWidth2;

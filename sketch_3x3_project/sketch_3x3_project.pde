@@ -36,7 +36,7 @@ println("CANVAS works");}
   String orientation = ( appWidth>=appHeight ) ? ls : p; //Ternary Operator
   println( DO, orientation );
   if ( orientation==ls ) { //Test for chosen display orientation
-    println("Good to Go");
+    println("Ready");
   } else {
     appWidth *= 0; //asignment operator
     appHeight *= 0;
@@ -50,7 +50,7 @@ println("CANVAS works");}
     backgroundColor = color( random(400), random(235), random(300));
     background( backgroundColor);}
   //
-  buttonFont= createFont ("Arial", 23);
+  buttonFont= createFont ("Arial", 25);
   
   rectanglesSetup();
   //Single Executed Code
